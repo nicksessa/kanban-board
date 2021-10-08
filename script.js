@@ -206,7 +206,19 @@ function allowDrop(e) {
 function dragEnter(column) {
   //console.log(listColumns[column]);
   listColumns[column].classList.add("over");
+
   currentColumn = [column];
+
+  // listColumns.forEach((column) => {
+  //   if (listColumns[column] != currentColumn) {
+  //     column.classList.remove("over");
+  //     console.log("current col: ", currentColumn);
+  //   }
+  // });
+}
+
+function dragLeave(column) {
+  listColumns[column].classList.remove("over");
 }
 
 // dropping item in column
